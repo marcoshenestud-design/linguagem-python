@@ -1,7 +1,6 @@
-import random 
-#from random import randint 
+import random
 
-numero_aleatorio = random.randint(1, 100) 
-print(f"Um número aleatório entre 1 e 100: {numero_aleatorio}")
+cidade_aleatoria = random.choice(["Rio de Janeiro", "Salvador", "Curitiba"])
+print(f"Cidade escolhida aleatoriamente: {cidade_aleatoria}")
 
-#randint - usada para gerar números inteiros aleatórios dentro de um intervalo.
+#choice - usada para escolher um elemento aleatório de uma sequência.
