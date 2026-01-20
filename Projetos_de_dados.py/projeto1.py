@@ -58,12 +58,10 @@ def criar_dados(num_registros = 600):
             'Cidade': cidade,
             'Estado': cidades_estados[cidade]
         })
-    
-
     print("Geração de dados concluída.\n")
-
-
     return pd.DataFrame(dados_vendas)
+
+
 
 df_vendas = criar_dados(500)
 

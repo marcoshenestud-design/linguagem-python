@@ -8,5 +8,7 @@ pessoas = {
 }
 
 
-###########APRENDER A USAR LAMBDA##########################################
+lista = [{'nome': nome, 'idade': idade} for nome, idade in pessoas.items()]
 
+pessoas_ordenadas = sorted(lista, key= lambda pessoa: pessoa['idade'])
+print(pessoas_ordenadas)
