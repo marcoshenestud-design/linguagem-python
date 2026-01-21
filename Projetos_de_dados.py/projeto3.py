@@ -21,6 +21,10 @@ vendas = [
 df = pd.DataFrame(vendas)
 #print(df)
 
+#=-=-=-=-=-=-=-=-=-=-=-=-
+# PERGUNTAS DE NEGÓCIOS
+#=-=-=-=-=-=-=-=-=-=-=-=-
+
 # 1) Qual foi o faturamento total da loja? 
 df['faturamentoTotal'] = df['preco'] * df['quantidade']
 faturamentoTotal = df['preco'] * df['quantidade']
@@ -39,27 +43,22 @@ print(cidFaturamento)
 formPagamento = df['forma_pagamento'].value_counts().sort_values(ascending=False)
 print(formPagamento)
 
+# 5) Qual foi o faturamento total por dia?
+print((df.groupby('data')['faturamentoTotal'].sum().sort_values(ascending=False)))
+
 # 6) Qual produto teve o maior faturamento total?
 print(df.groupby('produto')['faturamentoTotal'].sum().sort_values(ascending=False))
 
+# 7) Qual categoria vendeu mais unidades (quantidade total)?
+print(df.groupby('categoria')['quantidade'].sum().sort_values(ascending=False))
+
+# 8) Qual cidade realizou mais vendas (quantidade de registros)?
+print(df.groupby('cidade')['quantidade'].sum().sort_values(ascending=False))
 
 # 9) Qual foi o ticket médio (faturamento médio por venda)?
 quantidade = df['quantidade'].sum()
 ticketMedio = faturamentoTotal.sum()/quantidade
 print(ticketMedio)
-
-
-
-# 5) Qual foi o faturamento total por dia?
-print((df.groupby('data')['faturamentoTotal'].sum().sort_values(ascending=False)))
-
-# 7) Qual categoria vendeu mais unidades (quantidade total)?
-print(df.groupby('categoria')['quantidade'].sum().sort_values(ascending=False))
-
-
-# 8) Qual cidade realizou mais vendas (quantidade de registros)?
-print(df.groupby('cidade')['quantidade'].sum().sort_values(ascending=False))
-
 
 # 10) Em qual dia ocorreu o maior faturamento?
 print(df.groupby('data')['faturamentoTotal'].sum().sort_values(ascending=False))
