@@ -19,47 +19,58 @@ df = pd.DataFrame(vendas)
 # 1. Qual foi o faturamento total?
 df['faturamento'] = df['preco'] * df['quantidade']
 print(df)
-print('-'*30)
+print('-'*60)
 print(f'O faturamento total foi {df['faturamento'].sum()}.')
-print('-'*30)
-
+print('-'*60)
 
 # 2. Qual produto gerou mais receita?
 receita_produto = df.groupby('produto')['faturamento'].sum()
 print(f"Produto com mais receita: {receita_produto.idxmax()}.") #mostra somente o que tem qual dos produtos tem o maior faturamento
-print('-'*30)
-
+print('-'*60)
 
 # 3. Qual produto vendeu mais unidades?
 produtoUnidade = (df.groupby('produto')['quantidade'].sum())
 print(f'O produto que mais vendeu foi {produtoUnidade.idxmax()}.')
-print('-'*30)
-
+print('-'*60)
 
 # 4. Qual foi o ticket médio das vendas?
 ticket_medio = df['faturamento'].sum() / df['id_venda'].count()
 print(f"O ticket médio das vendas foi {ticket_medio:.2f}.")
-print('-'*30)
-
+print('-'*60)
 
 # 5. Qual categoria vendeu mais em valor?
 catMaisVendeu = (df.groupby('categoria')['faturamento'].sum())
 print(f'A categoria que mais vendeu {catMaisVendeu.idxmax()}.')
-print('-'*30)
-
+print('-'*60)
 
 # 6. Qual categoria vendeu mais em quantidade?
 catMaisQuantidade = df.groupby('categoria')['quantidade'].sum()
 print(f'A categoria que vendeu mais quantidade foi {catMaisQuantidade.idxmax()}.')
+print('-'*60)
 
 # ===============================
 # 🧑‍💼 VENDEDORES
 # ===============================
 
 # 7. Qual vendedor vendeu mais?
+print(f'O vendedor que mais vendeu foi {df.groupby('vendedor')['quantidade'].sum().idxmax()}.') #preciso saber se caso dosi vendedores tivessem as mesmas quantidade de vendas. o que eu faria?
+print('-'*60)
+
 # 8. Qual vendedor faturou mais?
+print(f'Quem faturou mais foi {df.groupby('vendedor')['faturamento'].sum().idxmax()}.')
+print('-'*60)
+
 # 9. Quantas vendas cada vendedor realizou?
+print(df.groupby('vendedor')['quantidade'].count())
+print('-'*60)
+
 # 10. Qual vendedor tem o maior preço médio por venda?
+preco_medio_venda = df.groupby('vendedor')['faturamento'].sum() / df.groupby('vendedor')['id_venda'].count()
+print(preco_medio_venda)
+print('-'*60)
+print(f"Vendedor com maior preço médio por venda: {preco_medio_venda.idxmax()}.")
+print('-'*60)
+
 
 
 # ===============================
