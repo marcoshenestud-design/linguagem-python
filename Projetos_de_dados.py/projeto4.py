@@ -19,7 +19,7 @@ df = pd.DataFrame(vendas)
 # 1. Qual foi o faturamento total?
 df['faturamento'] = df['preco'] * df['quantidade']
 print(df)
-print('-'*60)
+print('-'*75)
 print(f'O faturamento total foi {df['faturamento'].sum()}.')
 print('-'*60)
 
@@ -78,8 +78,17 @@ print('-'*60)
 # ===============================
 
 # 11. Quais produtos tiveram vendas acima da média?
+media = df['faturamento'].mean()
+print(df.groupby('produto')['faturamento'].sum().loc[lambda x: x > media])
+print('-'*60)
+
 # 12. Quais produtos tiveram vendas abaixo da média?
+print(df.groupby('produto')['faturamento'].sum().loc[lambda x: x < media])
+print('-'*60)
+
 # 13. Qual é o top 3 produtos mais vendidos?
+
+
 # 14. Existe algum produto com vendas zeradas?
 # 15. Qual produto tem o maior preço unitário?
 
