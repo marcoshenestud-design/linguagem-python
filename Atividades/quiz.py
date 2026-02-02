@@ -1,5 +1,7 @@
 tarefas = []
+
 #calculadora
+
 def adicionar_tarefa():
     tarefa = input("Digite a tarefa: ")
     tarefas.append(tarefa)
