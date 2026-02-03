@@ -87,17 +87,25 @@ print(df.groupby('produto')['faturamento'].sum().loc[lambda x: x < media])
 print('-'*60)
 
 # 13. Qual é o top 3 produtos mais vendidos?
-
+print(df.groupby('produto')['quantidade'].sum().nlargest(3))
+print('-'*60)
 
 # 14. Existe algum produto com vendas zeradas?
-# 15. Qual produto tem o maior preço unitário?
+############
+############
 
+# 15. Qual produto tem o maior preço unitário?
+print(df.groupby('produto')['preco'].sum().nlargest(1))
+print('-'*60)
 
 # ===============================
 # 📈 ANÁLISES SIMPLES (NEGÓCIO)
 # ===============================
 
 # 16. Se aumentarmos o preço em 10%, qual será o novo faturamento?
+df['preco'] = df['preco'] * 0,1
+print(df)
+
 # 17. Qual produto representa maior percentual do faturamento total?
 # 18. Quais produtos representam 80% da receita? (Pareto 80/20)
 # 19. Se removermos um vendedor, quanto de faturamento perdemos?
