@@ -126,6 +126,9 @@ print(df)
 # ===============================
 
 # 21. O que você faria para aumentar o faturamento?
+
+
+
 # 22. Que métrica é mais importante: quantidade vendida ou receita?
 # 23. Como identificar produtos encalhados?
 # 24. Como explicar esses dados para alguém não técnico?
