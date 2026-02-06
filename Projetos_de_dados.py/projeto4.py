@@ -130,6 +130,9 @@ print(df)
 
 
 # 22. Que métrica é mais importante: quantidade vendida ou receita?
+
+
+
 # 23. Como identificar produtos encalhados?
 # 24. Como explicar esses dados para alguém não técnico?
 # 25. Que tipo de gráfico usaria para mostrar essas informações?
