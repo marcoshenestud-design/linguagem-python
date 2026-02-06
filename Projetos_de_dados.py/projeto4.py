@@ -107,8 +107,17 @@ df['preco'] = df['preco'] * 0,1
 print(df)
 
 # 17. Qual produto representa maior percentual do faturamento total?
+
+
+
 # 18. Quais produtos representam 80% da receita? (Pareto 80/20)
+
+
+
 # 19. Se removermos um vendedor, quanto de faturamento perdemos?
+
+
+
 # 20. Qual categoria deveria receber mais investimento?
 
 
