@@ -138,4 +138,6 @@ print(df)
 
 
 # 24. Como explicar esses dados para alguém não técnico?
+
+
 # 25. Que tipo de gráfico usaria para mostrar essas informações?
