@@ -13,10 +13,12 @@ class ContaBancaria:
         self.titular = titular
         self.__saldo = saldo  # Atributo privado (encapsulado)
     
+    
     # Getter
     def get_saldo(self):
         return self.__saldo
     
+
     # Setter com validação
     def depositar(self, valor):
         if valor > 0:
