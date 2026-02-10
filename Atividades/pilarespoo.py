@@ -13,7 +13,7 @@ class ContaBancaria:
         self.titular = titular
         self.__saldo = saldo  # Atributo privado (encapsulado)
     
-    
+
     # Getter
     def get_saldo(self):
         return self.__saldo
@@ -39,6 +39,7 @@ class Cachorro(Animal):  # Herda de Animal
         super().__init__(nome)  # Chama construtor da classe pai
         self.raca = raca
     
+
     # POLIMORFISMO: Sobrescrevendo método da classe pai
     def emitir_som(self):
         return "Au Au!"
@@ -50,7 +51,6 @@ class Cachorro(Animal):  # Herda de Animal
 class Gato(Animal):  # Também herda de Animal
     def emitir_som(self):
         return "Miau!"
-
 
 # PILAR 4: POLIMORFISMO
 def fazer_barulho(animal):
