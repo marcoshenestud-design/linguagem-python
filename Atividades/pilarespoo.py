@@ -59,7 +59,7 @@ def fazer_barulho(animal):
 
 # Exemplo de uso
 if __name__ == "__main__":
-    # Testando Encapsulamento
+    # Testando Encapsulamento 
     conta = ContaBancaria("João", 1000)
     conta.depositar(500)
     conta.sacar(200)
