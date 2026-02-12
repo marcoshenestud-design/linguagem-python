@@ -1,4 +1,5 @@
 # PILAR 1: ABSTRAÇÃO
+
 class Animal:
     def __init__(self, nome):
         self.nome = nome
@@ -26,7 +27,7 @@ class ContaBancaria:
             return True
         return False
     
-    
+
     def sacar(self, valor):
         if 0 < valor <= self.__saldo:
             self.__saldo -= valor
