@@ -26,6 +26,7 @@ class ContaBancaria:
             return True
         return False
     
+    
     def sacar(self, valor):
         if 0 < valor <= self.__saldo:
             self.__saldo -= valor
