@@ -24,11 +24,14 @@ def main():
         
         if opcao == "1":
             adicionar_tarefa()
+
         elif opcao == "2":
             ver_tarefas()
+
         elif opcao == "3":
             print("Até logo!")
             break
+        
         else:
             print("Opção inválida! Tente 1, 2 ou 3.")
 
