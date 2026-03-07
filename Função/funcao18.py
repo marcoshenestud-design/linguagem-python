@@ -1,17 +1,14 @@
 #Crie uma função que receba uma lista de strings (potenciais e-mails) e um parâmetro opcional dominio_desejado (com valor padrão "gmail.com"). A função deve retornar uma nova lista, usando list comprehension, contendo apenas os e-mails que terminam com o domínio desejado.
 
-e_mail = []
+emails = []
 
-def menu(quantos):
-    registros = int(input('Quantos email você que registrar? '))
+quantidade = int(input("Quantos emails deseja cadastrar? "))
 
+for i in range(quantidade):
+    email = input("Digite o email: ")
+    emails.append(email)
 
-def filter_email(email):
-    email = str(input('Digite seu email: '))
+def filtrar_emails(lista_emails, dominio_desejado="gmail.com"):
+    return [email for email in lista_emails if email.endswith(dominio_desejado)]
 
-    
-
-
-filter_email()
-
-'''NÃO CONSEGUI FAZER ESSA'''
+print(filtrar_emails(emails))
